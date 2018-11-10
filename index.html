@@ -1,0 +1,343 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinoth kumar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+    <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        #a {
+            width: 100%;
+            height: 1000px;
+            position: absolute;
+            top: 0px;
+            clip: rect(0px,1350px;
+            60px;
+            0px);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: right;
+        }
+
+            li a {
+                opacity: 0.5;
+                letter-spacing: 1px;
+                display: block;
+                color: black;
+                text-align: left;
+                padding: 10px 30px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: rgb(135, 180, 206);
+                }
+
+        #navdesk {
+            position: absolute;
+            top: 10px;
+            left: 450px;
+        }
+
+        div.intro {
+            position: relative;
+            top: 120px;
+            left: 150px;
+        }
+
+            div.intro h3 {
+                letter-spacing: 2px;
+                font-size: 40px;
+                margin-left: 175px;
+                margin-bottom: 0px
+            }
+
+            div.intro h1 {
+                font-family: "Times New Roman", Times, serif;
+                letter-spacing: 2px;
+                font-size: 50px;
+                margin-top: 0px;
+                margin-bottom: 0px
+            }
+
+        div.opac h3 {
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 30px;
+            filter: alpha(opacity=60);
+            opacity: 0.8;
+            font-weight: bold;
+            color: rgb(107, 37, 102);
+            font-size: 30px;
+            text-align: center;
+            letter-spacing: 3px
+        }
+
+        div.follow {
+            position: absolute;
+            top: 450px;
+            margin-left: 40px;
+        }
+
+            div.follow p {
+                letter-spacing: 2px;
+                color: white;
+                font-size: 20px;
+                opacity: 0.7;
+            }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa {
+            padding: 5px;
+            font-size: 20px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 40%;
+        }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+        #container {
+            position: absolute;
+            right: 50px;
+            top: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0px;
+            background-color: rgb(107, 37, 102);
+            opacity: 0.9;
+            padding: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 30px;
+            height: 3px;
+            background-color: rgb(255, 255, 255);
+            margin: 6px 0;
+            border: 4px;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .in-bar {
+            position: absolute;
+            top: 55px;
+            left: 268px;
+            width: 42px;
+            height: 400px;
+            background-color: rgb(107, 37, 102);
+        }
+
+            .in-bar a {
+                display: block;
+                text-align: center;
+                padding-top: 50px;
+                transition: all 0.3s ease;
+                color: white;
+                font-size: 15px;
+            }
+
+                .in-bar a:hover {
+                    background-color: #000;
+                }
+
+        @media screen and (max-width: 700px) {
+            div.follow {
+                position: absolute;
+                top: 450px;
+                left: -30px;
+            }
+
+                div.follow p {
+                    letter-spacing: 2px;
+                    color: white;
+                    font-size: 20px;
+                    opacity: 0.7;
+                }
+            
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+
+            var c = $(window).width();
+            var d = $(window).height();
+            if (c < 700) {
+                $("#b").width(c);
+                $("#b").height(d);
+                $("#b").show();
+                $("div.mobhi").html("<h3>Hi,I am<h3>");
+                $("div.mobhi").css({
+                    "position": "absolute",
+                    "letter-spacing": "1px",
+                    "font-size": "40px",
+                    "left": "25px",
+                    "top": "15px"
+                });
+                $("div.mobvinoth").html("<h3 style='letter-spacing:4px'><span style='color:rgb(107, 37, 102);font-size:50px;font-weight:bold'>V</span><span style='font-size=20px'>INOTH</span></h3>");
+                $("div.mobvinoth").css({ "position": "absolute", "top": "45px", "left": "5px" });
+                $("div.mobkumar").html("<h3 style='letter-spacing:4px'><span style='color:rgb(107, 37, 102);font-size:50px;font-weight:bold'>K</span><span style='font-size=20px'>UMAR</span></h3>");
+                $("div.mobkumar").css({ "position": "absolute", "top": "95px", "left": "5px" });
+                //$("div.mobquoteA").html("<p style='position:absolute;opacity:0.8;left:55px;top:176px;color:rgb(107, 37, 102);background-color : #000000;opacity:0.8'>A</p>");
+                $("div.mobquote").html("<p style:'color:rgb(13, 2, 2);'>A Self taught<br>Programmer.</p>");
+                $("div.mobquote").css({ "position": "absolute", "letter-spacing": "4px", "font-weight": "bold", "background-color": "#000000", "opacity": "0.7", "color": "rgb(107, 37, 102)", "text-align": "center", "padding": "2px", "left": "5px", "top": "195px" });
+                $("#container").show();
+                $("div.in-bar").hide();
+                $("#container").click(function () {
+                    $("div.in-bar").toggle();
+                });
+                $("div.opac").hide();
+                $("div.intro").hide();
+                $("#navdesk").hide();
+
+                $("#a").hide(1);
+
+
+            }
+            else {
+
+                $("#a").show();
+                $("#container").hide();
+                $("div.in-bar").hide();
+                $("#b").hide(1);
+                $("div.mobhi").hide();
+                $("div.mobvinoth").hide();
+                $("div.mobkumar").hide();
+                $("div.mobquote").hide();
+                $("div.opac").show();
+                $("div.intro").show();
+                $("#navdesk").show();
+                $("div.follow").show();
+                //$("div").hide("onlymob");
+            }
+  $("body").effect("pulsate",{times:1}, 2000);
+        });
+    </script>
+
+
+
+</head>
+<body>
+
+<img id="a"  src="IMG_20171231_111150.jpg" alt="image" ></img>
+<img id="b" style="scrolling:No" class="img-responsive" src="mob_pic_org.jpg" alt="image" ></img>
+
+<div id="navdesk">
+<ul style="background-color:transparent;text-align:center;font-family: 'Bungee Shade';font-size: 22px;">
+		
+  <li><a href="contact.html"><span style="font-weight:100;color:rgb(107, 37, 102)"><b>Contact</b></span></a></li>	
+  <li><a href="PortFolio.html"><span style="font-weight:100;color:rgb(107, 37, 102)"><b>Portfolio</b></span></a></li>
+  <li><a href="Aboutme.html"><span style="font-weight:100;color:rgb(107, 37, 102)"><b>About</b></span></a></li>
+  <li ><a  href="index.html" ><span style="font-weight:100;color:red"><b>Home</b></span></a></li>
+</ul>
+
+</div>
+<div class="intro">
+<h3>Hi,I am</h3>
+<h1><span style="color:rgb(107, 37, 102);font-size:75px;">V</span>INOTH <span style="color:rgb(107, 37, 102);font-size:75px">K</span>UMAR</h1>
+ <div class="opac">
+    <h3>A Self taught Programmer</h3>
+  </div>
+</div>
+<div class="follow">
+<p>Follow me on:</p>
+<a href="https://www.facebook.com/vinoth.viru.97" class="fab fa-facebook fa-lg fb fa-2x" style="background-color:white;color:blue"></a>
+<a href="#" class="fab fa-google-plus-square fa-lg gplus fa-2x" style="background-color:red;color:white"></a>
+<a href="https://www.linkedin.com/in/vinoth-kumar-505a40104/" class="fab fa-linkedin fa-lg lin fa-2x" style="background-color:white;color:red"></a>
+</div>
+
+<!--
+
+<script>
+window.onscroll = function() {myFunction()};
+
+
+var sticky = navdesk.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navdesk.classList.add("sticky")
+  } else {
+    navdesk.classList.remove("sticky");
+  }
+}
+</script>
+
+-->
+
+<div class="mobhi"></div>
+<div class="mobvinoth"></div>
+<div class="mobkumar"></div>
+<div class="mobquoteA"></div>
+<div class="mobquote"></div>
+<div id="container">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+<div class="in-bar">
+  <a href="index.html"><i class="fas fa-home fa-2x"></i></a> 
+  <a href="Aboutme.html"><i class="fas fa-id-card fa-2x "></i></a> 
+  <a href="PortFolio.html"><i class="far fa-file-alt fa-2x"></i></a> 
+  <a href="contact.html"><i class="far fa-paper-plane fa-2x"></i></a>
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vinoth Kumar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <style>
+        html, body {
+            background-color: black;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            margin: auto;
+        }
+
+        .container-box {
+            width: 100%;
+            text-align: center;
+            /*margin-top: 100px;*/
+            border: thick;
+            border-color: white;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            letter-spacing: 3px;
+            font-weight: 100;
+        }
+
+        h1 span span {
+            color: #bf2f13;
+            font-weight: 300;
+            letter-spacing: 5px;
+        }
+
+        h1 span {
+            letter-spacing: 5px;
+            font-weight: 100;
+        }
+
+        p {
+            font-size: 15px;
+            color: #d1cac8;
+            letter-spacing: .3px;
+            line-height: 22px;
+        }
+
+        .nick-name {
+            background: rgba(0, 0, 0, 0.32);
+            color: #ea5031;
+            font-size: 1em;
+            letter-spacing: 7px;
+            font-weight: 400;
+            background: rgba(0, 0, 0, 0.32);
+            padding: 4px 14px;
+        }
+
+
+        /*---------------------menu----------------------------------*/
+
+        a {
+            text-decoration-color: none;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .icon {
+            color: #d6482c;
+        }
+
+        .icon-active {
+            color: #f94d2a;
+        }
+
+        .icon:hover {
+            color: #f94d2a;
+        }
+
+        #menu-toggle {
+            z-index: 999;
+        }
+
+        .containers {
+            display: inline-block;
+            cursor: pointer;
+            border-style: solid;
+            border-width: 1px;
+           border-color:gray;
+            float: right;
+            
+            border-width: 1px;
+            position: absolute;
+            padding: 1px;
+            width: 35px;
+            border-radius: 5px;
+            right:2px;
+        }
+
+
+
+        .bar1, .bar2, .bar3 {
+            width: 25px;
+            height: 2px;
+            background-color: #f7d8d2;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Rotate first bar */
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        /* Fade out the second bar */
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        /* Rotate last bar */
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+     .fb {
+            color: #3b5998;
+        }
+.lin {
+            color: #0077B5;
+        }
+
+        .fb:hover {
+            color: #3b5998;
+        }
+
+        .gplus:hover {
+            color: #dd4b39;
+        }
+
+        .lin:hover {
+            color: #0077B5;
+        }
+
+
+
+        /*-------------------------------------------------------------------------------------------
+        -------------------------------------------contactme--------------------------------------
+        ------------------------------------------------------------------------------------*/
+
+
+        #contact {
+            right: 10px;
+            margin-right: 10px;
+            width: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            #map {
+                width: auto;
+            }
+        }
+
+        a {
+            color: azure;
+            padding-right: 20px;
+        }
+            a:hover {
+                color: #bf2f13;
+            }
+        .menu-cont{
+            text-align:left;
+            height:100px;
+            top:-20px;
+            font-size:22px;
+            
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("body").hide(1);
+            $("body").fadeIn(2500);
+            $("#skills").hide(1);
+            $("#contact").hide(1);
+            $("#map").hide(1);
+            if ($(window).width() < 578) {
+                $("#menu-toggle").show();
+                $("#menu > span > a").addClass("nav-link");
+                $("#menu").hide();
+                $("#menu").removeClass("menu-cont");
+            }
+            else {
+                $("#menu").show();
+                $("#menu > span > a").removeClass("nav-link");
+                $("#menu-toggle").hide();
+                $("#menu").addClass("menu-cont");
+               
+
+            }
+            $("#skills").show("drop", 3500);
+            $("#contact").show("bounce", 3500);
+            $("#map").show("pulsate", 3500);
+        });
+
+       
+        function toggleMenu(x) {
+           
+            $("#menu").toggle("slow");
+        }
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })</script>
+
+
+   
+
+
+
+</head>
+<body>
+    <br />
+    <div class="container-fluid container-box" style="background-color:rgb(0,0,0);text-align:center;font-family: 'Bungee Shade';font-size: 22px;">
+
+        <!--Menubar starts here-->
+
+        <div class="containers" onclick="toggleMenu(this)" id="menu-toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <div id="menu" class="menu-cont">
+
+
+            <span>
+                <a href="index.html" >
+                    Home
+                </a>
+            </span>
+
+            <span>
+                <a href="Aboutme.html">
+                    About
+                </a>
+            </span>
+
+            <span>
+                <a href="portFolio.html">
+                    Portfolio
+                </a>
+            </span>
+
+
+            <span style="">
+                <a href="contact.html" style="color:#bf2f13;text-align:center;">
+                    Contact Me
+                </a>
+            </span>
+
+
+</div>
+
+
+
+        <!--Menubar ends here-->
+
+        
+        <div style="position: relative; max-width: 1200px; margin: 0 auto; font-size: 15px;">
+            <h1>
+                <span> <span>C</span>ontact <span>M</span>e</span><br />
+            </h1>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 ">
+                <br /><br />
+                <div id="contact">
+                    <i class="fas fa-envelope fa-2x" style="color:#f4ae44"></i><span style="font-size: 20px;color:#f4ae44"> vinothkanagasabai5@gmail.com</span><br /><br />
+
+                    <i class="fab fa-facebook-f fa-2x fb"></i><span>&nbsp;<a class="fb" style="font-size: 20px;" href="https://www.facebook.com/vinoth.viru.97">vinoth.viru.97</a> </span><br /><br />
+                                       <i class="fab fa-linkedin-in fa-2x lin"></i>&nbsp;<span style="font-size: 20px;"> <a class="lin" href="https://www.linkedin.com/in/vinoth-kumar-505a40104/">vinoth kumar</a></span>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.6642044278253!2d80.20234282916928!3d13.057502999424983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAzJzI3LjAiTiA4MMKwMTInMTAuNCJF!5e0!3m2!1sen!2sin!4v1528612451638"  width="500" height="350" frameborder="1" style=" margin-top:20px;:10px solid grey;border-radius:10px;" allowfullscreen></iframe>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        
+    </div>
+
+</body>
+</html>
